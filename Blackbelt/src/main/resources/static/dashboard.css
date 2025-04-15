@@ -1,0 +1,87 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+ /* Header */
+header {
+    background-color: #f1f1f1;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .header-left img {
+    width: 170px;
+    height: 50px;
+    object-fit: contain;
+  }
+  
+  .header-right .username {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #333;
+  }
+  
+  .profile {
+    display: flex;
+    align-items: center;
+  }
+  
+  .profile img {
+    width: 170px;
+    height: 50px;
+    margin-right: 10px;
+  }
+  
+  .username {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #333;
+  }
+  
+  /* Layout principal */
+  .main {
+    display: flex;
+    height: calc(100vh - 70px); /* Altura total menos o header */
+  }
+  
+  /* Menu lateral */
+  .sidebar {
+    width: 200px;
+    background-color: #000;
+    color: white;
+    padding-top: 2rem;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding-left: 1rem;
+  }
+  
+  .sidebar li {
+    margin-bottom: 1rem;
+  }
+  
+  .sidebar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  .sidebar a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Conteúdo principal */
+  .content {
+    flex: 1;
+    padding: 2rem;
+    background-color: #f9f9f9;
+  }
+  
