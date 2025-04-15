@@ -1,4 +1,4 @@
-# Seg Blackbelt: Uma ferramenta de Gestão de vulnerabilidades
+# Blackbelt: Uma ferramenta de Gestão de vulnerabilidades
 
 ## 1. Sobre o projeto:
 
@@ -217,14 +217,9 @@ Para acessar a aplicação, é necessário fazer login em uma conta. Ao iniciar 
   Os Gestores têm acesso apenas aos dados de suas respectivas filiais. Eles podem visualizar as informações e adicionar correções as vulnerabilidades.
 
   ```bash
-  login: CarlaFerreira
-  Senha: 1234
-
   login: GabrielLima
   Senha: 1234
 
-  login: MarianaSoares
-  Senha: 1234
   ```
 
 ## Testes Recomendados
