@@ -71,7 +71,7 @@ Antes de configurar o ambiente, é necessário obter o código-fonte do projeto 
   Faça o clone do repositório do projeto para a sua máquina local:
 
   ```bash
-  https://github.com/Milena-Alb/Grow-2024-Mesa.git
+  https://github.com/Poopstoop1/Take-2025-BlackBelt.git
   ```
 
 - **2. Importar o Projeto na IDE**
@@ -94,6 +94,9 @@ Antes de configurar o ambiente, é necessário obter o código-fonte do projeto 
            1. Abra o VS Code.
            2. Vá na aba Extensions (ícone de quadradinho do lado esquerdo ou `Ctrl+Shift+X`).
            3. Procure por **Extension Pack for Java** e clique em **Install**.
+
+        - Instale a Extensão Java também no VScode.
+          
       2. **Abrir o Projeto**:
 
          1. Clique em File > Open Folder... ou use o atalho `Ctrl+K, Ctrl+O`.
