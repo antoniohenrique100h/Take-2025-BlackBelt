@@ -24,10 +24,12 @@
           </div>
         </div>
 
-        <button class="login-button" type="submit">Login</button>
+        <form action="/login" method="post">
+           <button class="login-button" type="submit">Login</button>
+        </form>
+        
+       <p class="esqueceusenha"> <a th:href="@{/recuperar-senha}">Esqueceu sua senha?</a></p>
 
-      </form>
-      <p class="esqueceusenha"> <a href="#">Esqueceu sua senha?</a></p>
       <div th:if="${param.success}" class="success-message">
         Login realizado com sucesso! Redirecionando...
         <meta http-equiv="refresh" content="4;url=/" />

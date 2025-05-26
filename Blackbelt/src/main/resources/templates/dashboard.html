@@ -5,45 +5,76 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dashboard</title>
+
   <link rel="stylesheet" th:href="@{/dashboard.css}" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 </head>
 
 <body>
-
+  <!-- ======= BARRA SUPERIOR ======= -->
   <header>
     <div class="header-left">
-      <a href="http://localhost:8080/"><img th:src="@{/img/blackbeltlogo.png}" alt="BlackBelt" /></a>
+      <a href="http://localhost:8080/">
+        <img th:src="@{/img/blackbeltlogo.png}" alt="BlackBelt" />
+      </a>
     </div>
     <div class="header-right">
       <span class="username" th:text="${message}"></span>
     </div>
   </header>
 
+  <!-- ======= CONTEÚDO PRINCIPAL ======= -->
   <div class="main">
+    <!-- ===== LATERAL ===== -->
     <aside class="sidebar">
       <nav>
         <ul>
-          <!--<li><a href="#">Cadastro de usuarios</a></li>-->
-          <li class="item"><a href="http://localhost:8080/"><span class="material-symbols-outlined">dashboard</span><span th:text="${#authorization.expression('hasRole(''ROLE_MANAGER'')') ? 'Dashboard Global' : 'Dashboard'}">Dashboard</span></a></li>
-          <li class="item" th:if="${#authorization.expression('hasRole(''ROLE_MANAGER'')')}"><a href="http://localhost:8080/usuarios"><span class="material-symbols-outlined">groups</span><span>Gestão de Usuários</span></a></li>
-          <li class="item" th:if="${#authorization.expression('hasRole(''ROLE_MANAGER'')')}"><a href="http://localhost:8080/empresa"><span class="material-symbols-outlined">library_add</span><span>Gestão de Empresas</span></a></li>
-          <li class="item"><a href="http://localhost:8080/logout"><span class="material-symbols-outlined">logout</span><span>Logout</span></a></li>
+          <li class="item">
+            <a href="http://localhost:8080/">
+              <span class="material-symbols-outlined">dashboard</span>
+              <span th:text="${#authorization.expression('hasRole(''ROLE_MANAGER'')') ? 'Dashboard Global' : 'Dashboard'}">Dashboard</span>
+            </a>
+          </li>
+
+          <li class="item" th:if="${#authorization.expression('hasRole(''ROLE_MANAGER'')')}">
+            <a href="http://localhost:8080/usuarios">
+              <span class="material-symbols-outlined">groups</span>
+              <span>Gestão de Usuários</span>
+            </a>
+          </li>
+
+          <li class="item" th:if="${#authorization.expression('hasRole(''ROLE_MANAGER'')')}">
+            <a href="http://localhost:8080/empresa">
+              <span class="material-symbols-outlined">library_add</span>
+              <span>Gestão de Empresas</span>
+            </a>
+          </li>
+
+          <li class="item">
+            <a href="http://localhost:8080/logout">
+              <span class="material-symbols-outlined">logout</span>
+              <span>Logout</span>
+            </a>
+          </li>
         </ul>
       </nav>
     </aside>
 
+    <!-- ===== PÁGINA DE CONTEÚDO ===== -->
     <section class="content">
-      <!-- Conteúdo principal da home aqui -->
-      <div class="dashboard-section" th:classappend="${#authorization.expression('hasRole(''ROLE_MANAGER'')') ? 'Dashboard Global' : 'Dashboard'}">
-        <h1 class="title-dashboard">Dashboard</h1>
-
-
-
-
-
-
+      <div class="dashboard-section"
+           th:classappend="${#authorization.expression('hasRole(''ROLE_MANAGER'')') ? 'Dashboard Global' : 'Dashboard'}">
+        <!-- =================== POWER BI EMBED =================== -->
+        <div class="report-wrapper">
+          <iframe
+            title="Relatorio Power BI"
+            src="https://app.powerbi.com/reportEmbed?reportId=3bde06e2-5fee-4eb3-9b69-15bf6e942267&autoAuth=true&ctid=2009dfae-df11-49c7-804d-fda8d5cd9865"
+            style="width:100%;height:80vh;border:none;"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <!-- ====================================================== -->
 
       </div>
     </section>
