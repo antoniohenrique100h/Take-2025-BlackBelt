@@ -8,12 +8,12 @@
 
 /* Header */
 header {
-  background-color: #f1f1f1;
+  background-color: #fffefe;
   padding: 1rem 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 5px solid #ccc;
 }
 
 .header-left img {
@@ -49,6 +49,7 @@ header {
 .main {
   display: flex;
   height: calc(100vh - 70px); /* Altura total menos o header */
+
 }
 
 /* Menu lateral */
@@ -69,7 +70,7 @@ header {
 }
 
 .sidebar a {
-  color: white;
+  color: #fffefe;
   text-decoration: none;
   font-size: 1rem;
 }
@@ -82,23 +83,31 @@ header {
 .content {
   flex: 1;
   padding: 2rem;
-  background-color: #f9f9f9;
+  background-color: #fffefe;
 }
 
 /*form começando do buttao adicionar*/
+.usuarioHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 60px;
+  margin-bottom: 10px;
+} 
 
 .button-campanha {
   /*alterei as cores para o padrao do figma*/
-  background-color: #ad1707;
+background-color: #ad1707;
   color: #fff;
   padding: 15px 20px;
   border: none;
   border-radius: 8px;
   cursor: pointer;
   font-size: 16px;
-  position: absolute;
-  top: 90px;
-  right: 20px;
+}
+.last-upload {
+ font-size: 25px;
+  margin: 0;
 }
 
 .button-campanha:hover {
@@ -111,12 +120,6 @@ header {
   color: #000;
 }
 
-.last-upload,
-.history-upload {
-  margin-top: 60px;
-  font-size: 25px;
-  margin-bottom: 10px;
-}
 
 .history-upload {
   margin-top: 100px;
@@ -218,6 +221,7 @@ table td a {
   border-radius: 5px; /* Bordas arredondadas */
   text-decoration: none; /* Remover sublinhado */
   transition: background-color 0.3s; /* Animação de hover */
+  cursor: pointer;
 }
 
 table td a:hover {
@@ -255,4 +259,34 @@ table tr:nth-child(even) {
   float: right;
   font-size: 24px;
   cursor: pointer;
+}
+
+
+
+#pagination-controls {
+  margin-top: 10px;
+  text-align: center; /* Centraliza os botões */
+  user-select: none;
+}
+
+#pagination-controls button {
+  background-color: #ad1707; /* mesma cor dos botões da tabela */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  margin: 0 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+#pagination-controls button:hover:not(:disabled) {
+  background-color: #740107; /* mesma cor do hover dos botões da tabela */
+}
+
+#pagination-controls button:disabled {
+  background-color: #5c0502; /* tom mais escuro para desabilitado */
+  cursor: default;
+  opacity: 0.6;
 }
